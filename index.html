@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="school.name">
+    <div>{{school.name}}</div>
+    <div>{{school.age}}</div>
+    <div>{{getSum}}</div>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+    </ul>
+  </div>
+  <!-- <script src="./node_modules/vue/dist/vue.min.js"></script> -->
+  <script src="./架构模式/mvvm.js"></script>
+  <script>
+    let vm = new Vue({
+      name:'app',
+      el:'#app',
+      data:{
+        school:{
+          name:'molong',
+          age:20,
+          count:20
+        }
+      },
+      computed:{
+        getSum(){
+          return this.school.age+this.school.count
+        }
+      },
+      methods:{
+        doSome(){
+          let a = 1
+        }
+      }
+    })
+  </script>
+</body>
+</html>
