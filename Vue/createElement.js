@@ -1,4 +1,3 @@
-```
 import { createElement } from './element.js'
 
 let vertualDom = createElement('ul',{class:'list'},[
@@ -7,4 +6,3 @@ let vertualDom = createElement('ul',{class:'list'},[
 ])
 
 console.log(vertualDom)
-```
